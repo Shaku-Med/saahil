@@ -180,7 +180,9 @@ img {
   color: white;
 }
 
-@media screen and (max-width: 800px) {
+/* I wasn't sure if I should use this in the code, this is to make the application responsive. */
+
+/* @media screen and (max-width: 800px) {
   .grid_box {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
@@ -218,9 +220,9 @@ img {
     width: 100%;
     scale: 1;
   }
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --maincl: #191919;
     --mainBg: #f6f6f6;
@@ -230,7 +232,7 @@ img {
     --dark: #353535;
     color-scheme: light;
   }
-}
+} */
 
 .hide_me {
   display: none;
