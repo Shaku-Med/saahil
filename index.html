@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="d-flex justify-content-between py-3 border-bottom">
+      <div class="left_part d-flex justify-content-center">
+        <div class="logo">
+          Chucky
+        </div>
+      </div>
+      <div class="search">
+        <form id='form'>
+          <input placeholder="Search" type="search" name="" id="search">
+          <button class="bi bi-search"></button>
+        </form>
+      </div>
+      <button id="acbtn" class="bi bi-list acbtn"></button>
+      <div id="dim" class="dim"></div>
+      <div id="right_part" class="right_part">
+        <a href="categories.html" target="_self" rel="noopener noreferrer">Categories</a>
+      </div>
+  </nav>
+
+  <section class="s1">
+    <div class="cont_ainer">
+      <h1 class="">Random Chuck Norris Jokes</h1>
+      <div id="jokes" class="row"></div>
+      <button onclick="myFunc()" id="loadJokesBtn" class="btn btn-primary mt-3">Load a Joke</button>
+  </div>
+
+  </section>
+
+  <section>
+    <div class="cont_ainer">
+      <h1>About Chuck Norris</h1>
+      <p>Chuck Norris is an American martial artist, actor, film producer, and screenwriter. He was born on March 10, 1940, in Ryan, Oklahoma. After serving in the United States Air Force, Norris became a martial arts champion and founded his own school of fighting, Chun Kuk Do.</p>
+      <p>He is best known for his roles in action films such as "Way of the Dragon" alongside Bruce Lee, and the television series "Walker, Texas Ranger." Beyond his on-screen persona, Chuck Norris has become a cultural icon, famous for his tough-guy image and a series of popular internet memes known as "Chuck Norris Facts."</p>
+  
+      <h2>Notable Movies</h2>
+      <ul>
+          <li><a href="https://www.imdb.com/title/tt0106168/" target="_blank">Walker, Texas Ranger</a></li>
+          <li><a href="https://www.imdb.com/title/tt0068935/?ref_=nv_sr_srsg_1_tt_7_nm_0_in_0_q_way%2520of%2520the%2520drago" target="_blank">Way of the Dragon (1972)</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script>
+    myFunc();
+  </script>
+
+</body>
+</html>

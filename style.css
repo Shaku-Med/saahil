@@ -1,0 +1,238 @@
+:root {
+  --maincl: #fff;
+  --mainBg: #121212;
+  --visited: #ff1616;
+  --basebg: #1c1c1c;
+  --deepgray: #272727;
+  --dark: #000;
+  color-scheme: dark;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: var(--mainBg);
+  color: var(--maincl);
+}
+
+a:visited {
+  color: var(--visited);
+  position: relative;
+}
+
+.right_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.right_part a {
+  padding: 5px;
+  width: fit-content;
+  min-width: fit-content;
+}
+
+nav {
+  padding: 5px;
+  background: var(--basebg);
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+}
+
+.left_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  min-width: fit-content;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+form button {
+  background: var(--deepgray);
+  border: none;
+  height: 2.2rem;
+  width: 2.5rem;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--mainBg);
+  /* border-radius: 5px; */
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.brd {
+  border: 1px solid var(--basebg);
+}
+
+.cont_ainer {
+  padding: 30px;
+}
+
+.acbtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--deepgray);
+  border: none;
+  display: none;
+  pointer-events: none;
+  border-radius: 10px;
+  min-width: 40px;
+}
+
+.dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--basebg);
+  z-index: 100;
+  opacity: 0.8;
+  cursor: pointer;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  scale: 1.1;
+}
+
+.card *:not(a, mark) {
+  color: var(--maincl) !important;
+  background: none !important;
+}
+.card {
+  background: var(--deepgray) !important;
+  color: var(--maincl) !important;
+}
+
+.grid_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+#search_rl {
+  text-align: center;
+  padding: 10px !important;
+}
+
+#jokes {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid var(--deepgray);
+  box-shadow: 0px 10px 5px var(--dark);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search_rl {
+  color: #dc4d4d;
+}
+
+img {
+  pointer-events: none !important;
+}
+
+::selection {
+  background: var(--visited);
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .grid_box {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .acbtn {
+    pointer-events: all;
+    display: flex;
+  }
+  .right_part {
+    position: fixed;
+    top: 0;
+    right: -200%;
+    width: 100%;
+    max-width: 60%;
+    background: var(--deepgray);
+    height: 100%;
+    z-index: 1000000;
+    align-items: start;
+    justify-content: start;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    flex-direction: column;
+  }
+  .right_part.ac {
+    right: 0;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .dim.dim_act {
+    opacity: 0.8;
+    visibility: visible;
+    display: flex;
+    pointer-events: all;
+    width: 100%;
+    scale: 1;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --maincl: #191919;
+    --mainBg: #f6f6f6;
+    --visited: #83ff16;
+    --basebg: #ffffff;
+    --deepgray: #d7d7d796;
+    --dark: #353535;
+    color-scheme: light;
+  }
+}
+
+.hide_me {
+  display: none;
+  pointer-events: none;
+}
